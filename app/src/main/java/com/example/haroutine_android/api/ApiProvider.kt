@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 private val retrofit: Retrofit = Retrofit.Builder().apply {
-    baseUrl("BASE_URL")
+    baseUrl("172.20.64.107:8080")
     addConverterFactory(GsonConverterFactory.create())
 }.build()
 
