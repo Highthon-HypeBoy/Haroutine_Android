@@ -42,6 +42,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
 
     override fun initView() {
-        TODO("Not yet implemented")
     }
 }
