@@ -43,21 +43,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         binding.btnAdd.setOnClickListener {
             startActivity(Intent(this, RoutinePostActivity::class.java))
 
-        val intent = Intent(this@MainActivity, NotificationService::class.java)
-        intent.action = NotificationService.ACTIVITY_SERVICE
+            val intent = Intent(this@MainActivity, NotificationService::class.java)
+            intent.action = NotificationService.ACTIVITY_SERVICE
 
-        if (Build.VERSION.SDK_INT >= 26) {
-            val CHANNEL_ID = "my_channel_01"
-            val channel = NotificationChannel(
-                CHANNEL_ID,
-                "Channel human readable title",
-                NotificationManager.IMPORTANCE_DEFAULT
-            )
-            (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(
-                channel
-            )
-            startService(intent)
+            if (Build.VERSION.SDK_INT >= 26) {
+                val CHANNEL_ID = "my_channel_01"
+                val channel = NotificationChannel(
+                    CHANNEL_ID,
+                    "Channel human readable title",
+                    NotificationManager.IMPORTANCE_DEFAULT
+                )
+                (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(
+                    channel
+                )
+                startService(intent)
 
+            }
         }
     }
 
