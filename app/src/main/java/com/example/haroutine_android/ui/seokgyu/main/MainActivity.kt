@@ -12,6 +12,7 @@ import androidx.core.app.NotificationCompat
 import com.example.haroutine_android.R
 import com.example.haroutine_android.databinding.ActivityMainBinding
 import com.example.haroutine_android.ui.BaseActivity
+import com.example.haroutine_android.ui.hyunmyeong.MyPageActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.NonRoutineDetailActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.RoutineDetailActivity
 
@@ -35,7 +36,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             val intent = Intent(this, NonRoutineDetailActivity::class.java)
             startActivity(intent)
         }
-
+        binding.btnProfile.setOnClickListener {
+            val intent = Intent(this, MyPageActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnAdd.setOnClickListener {
             startActivity(Intent(this, RoutinePostActivity::class.java))
 
