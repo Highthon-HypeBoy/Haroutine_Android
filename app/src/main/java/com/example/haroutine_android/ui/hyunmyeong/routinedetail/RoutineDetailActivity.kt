@@ -25,6 +25,11 @@ class RoutineDetailActivity : BaseActivity<ActivityRoutineDetailBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.bt.setOnClickListener {
+            showShortToast("수험생 열공 루틴 시작!")
+            finish()
+        }
+
         binding.share.setOnClickListener {
             val view: View = window.decorView.rootView
             view.isDrawingCacheEnabled = true //화면에 뿌릴때 캐시 사용
