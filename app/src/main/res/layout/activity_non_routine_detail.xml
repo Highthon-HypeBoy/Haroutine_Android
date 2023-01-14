@@ -99,6 +99,23 @@
                     android:text="#손흥민  #손흥민존 감아차기"
                     android:textColor="#5891FF" />
 
+                <LinearLayout
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/clip"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 공유하기"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
