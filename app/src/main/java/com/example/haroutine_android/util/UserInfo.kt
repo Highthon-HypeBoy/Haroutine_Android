@@ -1,3 +1,3 @@
 package com.example.haroutine_android.util
 
-const val ACCESS_TOKEN = "ACCESS_TOKEN"
+var ACCESS_TOKEN = "ACCESS_TOKEN"

@@ -7,6 +7,8 @@ import com.example.haroutine_android.R
 import com.example.haroutine_android.databinding.ActivityMainBinding
 import com.example.haroutine_android.dto.response.seokgyu.GetRoutineResponse
 import com.example.haroutine_android.ui.BaseActivity
+import com.example.haroutine_android.ui.hyunmyeong.routinedetail.NonRoutineDetailActivity
+import com.example.haroutine_android.ui.hyunmyeong.routinedetail.RoutineDetailActivity
 import com.example.haroutine_android.util.repeatOnStarted
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
@@ -15,10 +17,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        repeatOnStarted {
-            mainViewModel.eventFlow.collect { event -> handleEvent(event) }
+        binding.routine.setOnClickListener {
+            val intent = Intent(this, RoutineDetailActivity::class.java)
+            startActivity(intent)
+        }
+        binding.nonroutine.setOnClickListener {
+            val intent = Intent(this, NonRoutineDetailActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -28,21 +34,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                 showShortToast(event.message)
             }
             is MainViewModel.Event.GetRoutineSuccess -> {
-                initAdapter(event.getRoutineResponse)
             }
         }
     }
 
-    private fun initAdapter(routines: List<GetRoutineResponse>) {
-        routineAdapter = RoutineAdapter {
-            startActivity(Intent(this, ))
-        }
-        routineAdapter.submitList(routines)
-        binding.rvRoutine.adapter = routineAdapter
-    }
-
-
     override fun initView() {
-        TODO("Not yet implemented")
     }
 }

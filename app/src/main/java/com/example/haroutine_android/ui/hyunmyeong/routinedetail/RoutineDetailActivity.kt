@@ -35,6 +35,5 @@ class RoutineDetailActivity : BaseActivity<ActivityRoutineDetailBinding>(
 
 
     override fun initView() {
-        TODO("Not yet implemented")
     }
 }
