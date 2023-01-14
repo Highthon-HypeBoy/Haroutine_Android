@@ -35,6 +35,9 @@
 
 .gradle/vcs-1/gc.properties
 
+<<<<<<< Updated upstream
 .DS_Store
 
+=======
+>>>>>>> Stashed changes
 .idea/assetWizardSettings.xml
