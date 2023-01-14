@@ -1,4 +1,4 @@
-package com.example.haroutine_android.ui.seokgyu.routinecreate
+package com.example.haroutine_android.ui.seokgyu.postcreate
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

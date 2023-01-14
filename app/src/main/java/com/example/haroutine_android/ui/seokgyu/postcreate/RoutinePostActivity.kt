@@ -1,9 +1,8 @@
-package com.example.haroutine_android.ui.seokgyu.routinecreate
+package com.example.haroutine_android.ui.seokgyu.postcreate
 
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import androidx.compose.ui.graphics.Color
 import com.example.haroutine_android.R
 import com.example.haroutine_android.databinding.ActivityPostCreateBinding
 import com.example.haroutine_android.ui.BaseActivity
@@ -25,6 +24,8 @@ class RoutinePostActivity : BaseActivity<ActivityPostCreateBinding>(R.layout.act
         binding.btnCommon.setOnClickListener {
             it.setBackgroundResource(R.drawable.selected_button)
         }
+
+        binding.btnNext.setOnClickListener { finish() }
     }
 
     override fun initView() {

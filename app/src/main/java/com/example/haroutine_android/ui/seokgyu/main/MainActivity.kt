@@ -5,12 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.haroutine_android.R
 import com.example.haroutine_android.databinding.ActivityMainBinding
-import com.example.haroutine_android.dto.response.seokgyu.GetRoutineResponse
 import com.example.haroutine_android.ui.BaseActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.NonRoutineDetailActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.RoutineDetailActivity
-import com.example.haroutine_android.ui.seokgyu.routinecreate.RoutinePostActivity
-import com.example.haroutine_android.util.repeatOnStarted
+import com.example.haroutine_android.ui.seokgyu.postcreate.RoutinePostActivity
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private val mainViewModel: MainViewModel by viewModels()
