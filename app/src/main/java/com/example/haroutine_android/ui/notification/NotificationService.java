@@ -53,15 +53,16 @@ public class NotificationService extends Service {
             PendingIntent pendingIntent =
                     PendingIntent.getActivity(NotificationService.this, 0, intent,PendingIntent.FLAG_MUTABLE);
 
-            Notifi = new Notification.Builder(getApplicationContext(), "")
-                    .setContentTitle("Content Title")
-                    .setContentText("Content Text")
+            Notifi = new Notification.Builder(getApplicationContext(), "my_channel_01")
+                    .setOngoing(true)
+                    .setContentTitle("오늘 하루 약속한 루틴이 있습니다.")
+                    .setContentText("지금은 수학 숙제를 하는 시간입니다.")
                     .setSmallIcon(R.drawable.logo2)
                     .setTicker("알림!!!")
                     .setContentIntent(pendingIntent)
                     .build();
 
-            Notifi_M.notify( 777 , Notifi);
+            Notifi_M.notify( 100 , Notifi);
         }
     };
 }
