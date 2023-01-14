@@ -158,9 +158,10 @@
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#D1A0D0"
+            android:backgroundTint="#A881FF"
             app:borderWidth="0dp"
             app:tint="@color/white"
             android:src="@drawable/add"

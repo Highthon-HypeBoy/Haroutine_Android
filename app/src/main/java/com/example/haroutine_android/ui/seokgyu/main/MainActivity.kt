@@ -14,6 +14,9 @@ import com.example.haroutine_android.databinding.ActivityMainBinding
 import com.example.haroutine_android.ui.BaseActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.NonRoutineDetailActivity
 import com.example.haroutine_android.ui.hyunmyeong.routinedetail.RoutineDetailActivity
+
+import com.example.haroutine_android.ui.seokgyu.postcreate.RoutinePostActivity
+
 import com.example.haroutine_android.ui.notification.NotificationService
 
 
@@ -32,6 +35,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             val intent = Intent(this, NonRoutineDetailActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnAdd.setOnClickListener {
+            startActivity(Intent(this, RoutinePostActivity::class.java))
+
         val intent = Intent(this@MainActivity, NotificationService::class.java)
         intent.action = NotificationService.ACTIVITY_SERVICE
 
@@ -46,6 +53,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                 channel
             )
             startService(intent)
+
         }
     }
 
