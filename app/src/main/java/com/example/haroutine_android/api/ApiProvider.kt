@@ -13,3 +13,7 @@ private val retrofit: Retrofit = Retrofit.Builder().apply {
 val hyunMyeongApi: HyunMyeongApi by lazy {
     retrofit.create(HyunMyeongApi::class.java)
 }
+
+val seokgyuApi: SeokgyuApi by lazy {
+    retrofit.create(SeokgyuApi::class.java)
+}
