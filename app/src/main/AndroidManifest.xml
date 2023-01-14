@@ -16,7 +16,13 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".ui.hyunmyeong.HomeActivity"
+            android:name=".ui.seokgyu.routinecreate.RoutinePostActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".ui.hyunmyeong.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
