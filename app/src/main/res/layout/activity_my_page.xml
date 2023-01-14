@@ -6,6 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         tools:context=".ui.hyunmyeong.MyPageActivity">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_search"
@@ -73,6 +74,7 @@
             android:paddingHorizontal="20dp"
             android:paddingTop="20dp"
             android:paddingBottom="25dp"
+            android:layout_marginTop="5dp"
             android:layout_marginHorizontal="15dp"
             app:layout_constraintTop_toBottomOf="@id/mine"
             android:background="@drawable/routine_background">
@@ -121,7 +123,7 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintTop_toBottomOf="@id/hiitsme"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -132,6 +134,7 @@
             android:orientation="vertical"
             android:paddingHorizontal="20dp"
             android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
             android:paddingBottom="25dp"
             android:layout_marginHorizontal="15dp"
             app:layout_constraintTop_toBottomOf="@id/perform"
