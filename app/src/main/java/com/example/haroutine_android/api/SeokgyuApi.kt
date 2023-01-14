@@ -4,6 +4,7 @@ import com.example.haroutine_android.dto.response.seokgyu.CreateRoutineResponse
 import com.example.haroutine_android.dto.response.seokgyu.GetRoutineResponse
 import com.example.haroutine_android.util.ACCESS_TOKEN
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.Headers
 import retrofit2.http.POST
 
@@ -13,8 +14,8 @@ interface SeokgyuApi {
 
     ): CreateRoutineResponse
 
-    @Headers("Authorization: Bearer $ACCESS_TOKEN")
     @GET("v1/routines")
     suspend fun getRoutineList(
+        @Header("Authorization") token: String
     ): List<GetRoutineResponse>
 }

@@ -7,4 +7,8 @@ class HyunMyeongRepository() {
 
     suspend fun fetchRoutineDetail(id: Int): RoutineDetailResponse =
         hyunMyeongApi.fetchRoutineDetail(id)
+
+    suspend fun postSignUp(name: String): String {
+        return hyunMyeongApi.postSignUp(name)
+    }
 }
