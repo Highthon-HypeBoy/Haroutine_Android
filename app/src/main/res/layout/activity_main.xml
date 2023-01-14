@@ -157,5 +157,20 @@
                 android:textColor="#5891FF"/>
         </LinearLayout>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A881FF"
+            app:borderWidth="0dp"
+            app:tint="@color/white"
+            android:src="@drawable/add"
+            android:clickable="true"
+            app:maxImageSize="35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -26,6 +26,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".RoutineCreateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.seokgyu.postcreate.RoutinePostActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.hyunmyeong.HomeActivity"
             android:exported="false">
             <meta-data
